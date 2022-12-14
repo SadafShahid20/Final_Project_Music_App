@@ -111,7 +111,7 @@ const Home = () => {
       <div className="w-full h-auto flex items-center justify-evenly gap-4 flex-wrap p-4">
         <HomeSongContainer musics={filteredSongs ? filteredSongs : allSongs} />
       </div>
-      <Footer />
+      <Footer className= "mb-auto " />
     </div>
 
   );

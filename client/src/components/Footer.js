@@ -5,7 +5,7 @@ import {BiCopyright} from 'react-icons/bi'
 
 const Footer = () => {
   return (
-    <footer  className="flex items-center bg-black w-full p-4 md:py-2 md:px-6 flex-row">
+    <footer  className="fixed inset-x-0 bottom-0 flex items-center bg-black w-full p-4 md:py-2 md:px-6 flex-row">
    <div className='flex flex-row w-[85%]'>
       <ImFacebook2 className="text-5xl text-white cursor-pointer m-5" />
         <p className="text-lg text-white "></p>

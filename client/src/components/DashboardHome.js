@@ -65,9 +65,8 @@ const DashBoardHome = () => {
       <DashboardCard icon={<GiMusicalNotes className="text-3xl text-textColor" />} name={"Album"} count={allAlbums?.length > 0 ? allAlbums?.length : 0} />
       
     </div>
-   {/* <div>
-      <Footer />
-    </div> */}
+      <Footer className= "mb-auto "/>
+    
      </>
   );
 };
