@@ -17,6 +17,10 @@ import MusicPlayer  from './components/MusicPlayer'
 import { useStateValue } from "./context/StateProvider";
 import { actionType } from "./context/Reducer";
 import { motion, AnimatePresence } from "framer-motion";
+import Music from './components/Music'
+import Premium from './components/Premium'
+import Contact from './components/Contact'
+import Footer from "./components/Footer";
 
 function App() {
   const firebaseAuth = getAuth(app);
@@ -75,6 +79,9 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login setAuth={setAuth} />} />
           <Route path="/*" element={<Home />} />
+          <Route path="/musics" element={<Music />} />
+          <Route path="/premium" element={<Premium/>} />
+          <Route path="/contact" element={<Contact/>} />
         <Route path="/dashboard/*" element={<Dashboard />} /> 
           {/*  <Route path="/userProfile" element={<UserProfile />} /> */}
         </Routes>
@@ -87,6 +94,7 @@ function App() {
             className={`fixed min-w-[700px] h-26  inset-x-0 bottom-0  bg-cardOverlay drop-shadow-2xl flex items-center justify-center`}
           >
             <MusicPlayer />
+        
          </motion.div>
         )} 
       </div>

@@ -6,6 +6,7 @@ import { isActiveStyles, isNotActiveStyles } from "../utils/styles";
 import { getAuth } from "firebase/auth";
 import { app } from "../config/firebase.config";
 import { motion } from "framer-motion";
+import Music from './Music'
 
 import { FaCrown } from "react-icons/fa";
 

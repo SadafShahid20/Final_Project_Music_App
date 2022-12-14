@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/Reducer";
 import { validateUser } from "../api";
+import { Logo } from "../assets/img";
 
 const Login = ({setAuth}) => {
   const firebaseAuth = getAuth(app);
@@ -113,18 +114,37 @@ const Login = ({setAuth}) => {
               onClick={handleLogin}>Login</button>
       </div> */}
 
-    <div className="relative w-screen h-screen">
-  
-      <div className="absolute inset-0 bg-darkOverlay flex items-center justify-center p-4">
-        <div className="w-full md:w-375 p-4 bg-lightOverlay shadow-2xl rounded-md ">
+    <div className="w-screen h-screen bg-black">
+   <div  className='flex items-center justify-center gap-[20px]  h-[400px] p-[40px]  flex-col'>
+    
+   <img src={Logo} className="w-30 mt-20" alt="" />
+   <h3 className="text-white text-5xl italic" >PASSION</h3>
+   <h3 className="text-white text-5xl italic gap-5" >MUSIC APP</h3>
+    {/* <input  
+              className='border-2 border-slate-500 p-[5px]'
+              placeholder='type your email'/>
+          <input  */}
+              {/* className='border-2 border-slate-500 p-[5px]'
+              placeholder='type your username'/>
+          <input 
+              className='border-2 border-slate-500 p-[5px]'
+              placeholder='type your password'/> */}
+          
+          {/* <button 
+              className='border-2 border-slate-500 p-[5px]  text-white'
+              >Login</button> */}
+              
+     
+      
           <div
             onClick={loginWithGoogle}
-            className="flex items-center justify-center  gap-2 px-4 py-2 rounded-md bg-cardOverlay cursor-pointer hover:bg-card hover:shadow-md duration-100 ease-in-out transition-all"
+            className="flex items-center justify-center  gap-2 px-4 py-2 rounded-[15px] cursor-pointer hover:bg-blue-500 hover:shadow-md duration-100 ease-in-out transition-all bg-yellow-400 text-xl"
           >
             <FcGoogle className="text-xl" />
             <p>Sign in with Google</p>
           </div>
-        </div>
+      
+      
       </div>
     // </div>
     </>

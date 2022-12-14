@@ -7,6 +7,7 @@ import Filter from "./Filter";
 import Header from "./Header";
 import SearchBar from "./SearchBar";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 
 const Home = () => {
   const [
@@ -110,7 +111,9 @@ const Home = () => {
       <div className="w-full h-auto flex items-center justify-evenly gap-4 flex-wrap p-4">
         <HomeSongContainer musics={filteredSongs ? filteredSongs : allSongs} />
       </div>
+      <Footer />
     </div>
+
   );
 };
 
@@ -158,7 +161,9 @@ export const HomeSongContainer = ({ musics }) => {
               {data.artist}
             </span>
           </p>
+      
         </motion.div>
+    
       ))}
     </>
   );
