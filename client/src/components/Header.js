@@ -12,7 +12,7 @@ import { FaCrown } from "react-icons/fa";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [{ user }, dispatch] = useStateValue();
+  const [{ users }, dispatch] = useStateValue();
 
   const [isMenu, setIsMenu] = useState(false);
 
@@ -42,6 +42,7 @@ const Header = () => {
         <li className="mx-5 text-lg"><NavLink to={'/premium'} className={({isActive}) => isActive ? isActiveStyles : isNotActiveStyles}>Premium</NavLink></li>
         {/* prettier-ignore */}
         <li className="mx-5 text-lg"><NavLink to={'/contact'} className={({isActive}) => isActive ? isActiveStyles : isNotActiveStyles}>Contact</NavLink></li>
+        <li className="mx-5 text-lg"><NavLink to={'/login'} className={({isActive}) => isActive ? isActiveStyles : isNotActiveStyles}>Login</NavLink></li>
       </ul>
 
       <div
@@ -51,13 +52,12 @@ const Header = () => {
       >
         <img
           className="w-12 min-w-[44px] object-cover rounded-full shadow-lg"
-          src={user?.user?.imageURL}
+          src={users?.user?.imageURL}
           alt=""
-          referrerpolicy="no-referrer"
         />
         <div className="flex flex-col">
           <p className="text-white text-lg hover:text-headingColor font-semibold">
-            {user?.user.name} Sadaf Talha
+            {users?.username}UserName
           </p>
           <p className="flex items-center gap-2 text-xs text-white font-normal">
             Premium Member.{" "}
@@ -77,7 +77,7 @@ const Header = () => {
                 Profile
               </p>
             </NavLink>
-            <p className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">
+            <p className="text-base text-black hover:font-semibold duration-150 transition-all ease-in-out">
               My Favourites
             </p>
             <hr />

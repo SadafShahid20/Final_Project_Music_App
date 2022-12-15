@@ -34,7 +34,7 @@ const FilterButtons = ({ filterData, flag }) => {
   return (
     <div className="border border-gray-300 rounded-md px-4 py-1 relative cursor-pointer hover:border-gray-400">
       <p
-        className="text-base tracking-wide text-textColor flex items-center gap-2 "
+        className="text-xl tracking-wide text-textColor flex items-center gap-2 "
         onClick={() => setFilterMenu(!filterMenu)}
       >
         {!filterName && flag}

@@ -21,6 +21,7 @@ import Music from './components/Music'
 import Premium from './components/Premium'
 import Contact from './components/Contact'
 import Footer from "./components/Footer";
+import Register from "./components/Register";
 
 function App() {
   const firebaseAuth = getAuth(app);
@@ -78,6 +79,7 @@ function App() {
         
         <Routes>
           <Route path="/login" element={<Login setAuth={setAuth} />} />
+          {/* <Route path="/register/*" element={<Register/>} />  */}
           <Route path="/*" element={<Home />} />
           <Route path="/musics" element={<Music />} />
           <Route path="/premium" element={<Premium/>} />

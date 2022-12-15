@@ -47,7 +47,7 @@ const Filter = ({ setFilteredSongs }) => {
           <p
             key={data.id}
             onClick={() => updateFilter(data.value)}
-            className={`text-base ${
+            className={`text-xl ${
               data.value === filterTerm ? "font-semibold" : "font-normal"
             } text-textColor cursor-pointer hover:font-semibold transition-all duration-100 ease-in-out`}
           >
